@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /api
+
+spring:
+  application:
+    name: customer-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:mysql://sql6.freesqldatabase.com/sql6420647
+    username: sql6420647
+    password: VvtEnp1W3x
+
+  security:
+    user:
+      name: Bossza
+      password: password
+      roles: ADMIN
+
+  loanService:
+    host: http://localhost:8082/api/loan
+    endpoint:
+      getInfo: info
+
+restTemplate:
+  connectionTimeOut: 5000
+  readTimeOut: 10000
